@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="EN">
+	<head>
+		<title>IG Live to YouTube</title>
+		<!--Matt Welter-->
+
+		<!--
+		
+		      ______ ______
+		    _/      Y      \_
+		   // ~~ ~~ | ~~ ~  \\
+		  // ~ ~ ~~ | ~~~ ~~ \\      Easter Egg 1/2 found
+		 //________.|.________\\     by Matt Welter
+		`----------`-'----------'
+
+
+		-->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="styles.css" rel="stylesheet">
+		<link href="favicon.png" rel="shortcut icon">
+		<meta name="description" content="IG Live to YouTube – IGL2YT is a 24/7 Instagram live archiver. We’ve created programs that automatically record and upload Instagram lives of your favorite people to dedicated YouTube channels.">
+		<script src="jquery-3.4.1.min.js"></script>
+		<script src="https://kit.fontawesome.com/ed51cee37f.js" crossorigin="anonymous"></script>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap" rel="stylesheet">
+
+	</head>
+	<body>
+		<main id="wrapper">
+			<section>
+				<a id="emoji-file">&#128450;</a>
+				<h1>IG Live to YouTube</h1>
+				<p id="hero-description"><a class="bold">IG Live to YouTube</a> is a 24/7 Instagram live archiver. It automatically records your favorite creators Instagram lives and uploads them to a dedicated YouTube channel.</p>
+			</section>
+
+
+			<section id="twitter-section">
+				<a href="https://twitter.com/IGLivetoYouTube" target="_blank">
+					<img src="media/twitter-logo.png" alt="Instagram Live to YouTube IGL2YT Twitter">
+					<h2 id="follow-twitter">Follow us on Twitter</h2>
+				</a>
+			</section>
+
+
+			<section id="list-section">
+				<table>
+				  <colgroup span="4"></colgroup>
+				  <tr id="table-header">
+					  <th class="col-username-width">Username</th>
+					  <th class="col-category-width">Category</th>
+					  <th class="col-date-width">Archive started</th>
+					  <th class="col-channel-width">YouTube Channel</th>
+				  </tr>
+
+				  <tr class="table-row">
+					  <td class="col-username col-username-width"><img src="media/charlidamelio.jpg" alt="Instagram Live to YouTube IG Live to YouTube IGL2YT" class="table-profpic"><b><a class="col-username-mobile" href="https://youtube.com/">@charlidamelio</a></b></td>
+					  <td class="col-category-width"><a class="col-category tiktok">TikTok</a></td>
+					  <td class="col-date col-date-width">Jan 4, 2020</td>
+					  <td><a class="col-channel col-channel-width" href="https://www.youtube.com/channel/UCHRiLpbt4ayY-0AKI7r2sTg" target="_blank">Go to archive</a></td>
+				  </tr>
+
+				  <tr class="table-row">
+					  <td class="col-username col-username-width"><img src="media/justinbieber.jpg" alt="Instagram Live to YouTube IG Live to YouTube IGL2YT" class="table-profpic"><b><a class="col-username-mobile" href="https://youtube.com/">@justinbieber</a></b></td>
+					  <td class="col-category-width"><a class="col-category musician">Musician</a></td>
+					  <td class="col-date col-date-width">Jan 6, 2020</td>
+					  <td><a class="col-channel col-channel-width" href="https://www.youtube.com/channel/UCHRiLpbt4ayY-0AKI7r2sTg" target="_blank">Go to archive</a></td>
+				  </tr>
+
+				  <tr class="table-row">
+					  <td class="col-username col-username-width"><img src="media/dixiedamelio.jpg" alt="Instagram Live to YouTube IG Live to YouTube IGL2YT" class="table-profpic"><b><a class="col-username-mobile" href="https://youtube.com/">@dixiedamelio</a></b></td>
+					  <td class="col-category-width"><a class="col-category tiktok">TikTok</a></td>
+					  <td class="col-date col-date-width">Jan 4, 2020</td>
+					  <td><a class="col-channel col-channel-width" href="https://www.youtube.com/channel/UCHRiLpbt4ayY-0AKI7r2sTg" target="_blank">Go to archive</a></td>
+				  </tr>
+
+				</table>
+			</section>
+
+			<section id="submit-section">
+				<h2 class="submit-title submit-title-desktop">Submit an IG account you want to archive</h2>
+				<h2 class="submit-title submit-title-mobile">Submit an IG account<br>you want to archive</h2>
+                <form method="post" autocomplete="off" name="google-sheet">
+                    <div>
+                        <input id="username-input" type="text" name="Username" placeholder="username" required=""/>
+                        <span id="a-span">@</span>
+                    </div>
+                    <div>
+                        <input id="username-submit" type="submit" name="submit" value="Submit account" />
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </form>
+			</section>
+
+			<p id="footer-credit">Project created by <a href="https://twitter.com/_mattwelter" target="_blank" class="bold">Matt Welter</a></p>
+
+		</main>
+	</body>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxe-KKqgtrRp3Ej_UYYxkG-1Dy4XxjDe4mA7dMPovcrr6cBnGsbNDQh/exec'
+    const form = document.forms['google-sheet']
+    let inputs = document.querySelectorAll('input[name="Username"]');
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      	inputs.forEach(input => input.value = '')
+      	.then(response => alert("Thank you for submitting an IG account!"))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</html>
+
+
+
+
+
+
+
