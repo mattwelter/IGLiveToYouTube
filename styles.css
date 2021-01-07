@@ -345,6 +345,10 @@ td {
 	}
 	h1 {
 		font-size: 36px;
+		letter-spacing: -1px;
+	}
+	h2 {
+		letter-spacing: -1px;
 	}
 	#hero-description {
 		width: 375px;
@@ -423,13 +427,13 @@ td {
 		width: 110px;
 	}
 	#table-header th {
-		font-size: 14px;
+		font-size: 16px;
 	}
 	.col-category {
 		font-size: 12px;
 	}
 	td {
-		font-size: 16px;
+		font-size: 21px;
 	}
 	th {
 		padding-bottom: 6px;
