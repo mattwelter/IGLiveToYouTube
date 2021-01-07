@@ -2,6 +2,8 @@
 	/*box-sizing: border-box;*/
 }
 
+input[type="submit"]{ -webkit-appearance: none; }
+
 #wrapper {
 	width: 1280px;
 	margin: 0 auto;
@@ -323,7 +325,7 @@ td {
 		display: none;
 	}
 	.col-username-mobile {
-		color: blue;
+		color: black;
 		text-decoration: underline;
 	}
 
