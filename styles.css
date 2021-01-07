@@ -344,10 +344,10 @@ td {
 	}
 	h1 {
 		font-size: 36px;
-		letter-spacing: -1px;
+		letter-spacing: -3px;
 	}
 	h2 {
-		letter-spacing: -1px;
+		letter-spacing: -3px;
 	}
 	#hero-description {
 		width: 375px;
